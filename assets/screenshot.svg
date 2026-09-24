@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="540" viewBox="0 0 880 540" font-family="SFMono-Regular, Consolas, Menlo, Monaco, monospace">
+  <rect width="880" height="540" rx="10" fill="#0d1117"/>
+  <rect width="880" height="34" rx="10" fill="#161b22"/>
+  <rect y="24" width="880" height="10" fill="#161b22"/>
+  <circle cx="20" cy="17" r="6" fill="#ff5f56"/>
+  <circle cx="40" cy="17" r="6" fill="#ffbd2e"/>
+  <circle cx="60" cy="17" r="6" fill="#27c93f"/>
+  <text x="440" y="21" fill="#8b949e" font-size="12" text-anchor="middle">bash — node bin/perimeterlens.js example.com</text>
+  <g font-size="13.5" fill="#c9d1d9">
+    <text x="20" y="58">$ node bin/perimeterlens.js example.com</text>
+    <text x="20" y="78" fill="#8b949e">perimeterlens: scanning example.com</text>
+    <text x="20" y="98" fill="#8b949e">Passive, read-only checks only. Only run this against a domain you own or are authorized to test.</text>
+    <text x="20" y="128" fill="#79c0ff" font-weight="bold"># perimeterlens report: example.com</text>
+    <text x="20" y="152" fill="#3fb950" font-weight="bold">Composite score: 97/100 (A)</text>
+    <text x="20" y="170" fill="#8b949e" font-style="italic">Based on: email, tls. Passive, self-target checks only.</text>
+    <text x="20" y="200" fill="#79c0ff">## 1. Subdomain / asset exposure (certificate-transparency log baseline)</text>
+    <text x="20" y="220" fill="#d29922">Could not complete: crt.sh request failed after 3 attempts (temporarily unavailable)</text>
+    <text x="20" y="250" fill="#79c0ff">## 2. Email spoofability</text>
+    <text x="20" y="270">Exact-domain header-From spoofable: no — DMARC present and enforcing (p=reject)</text>
+    <text x="20" y="290">Subdomain header-From spoofable: no      Envelope (bounce) spoofable: no</text>
+    <text x="20" y="310">SPF record: present</text>
+    <text x="20" y="330">DMARC record: present (p=reject, sp=reject, pct=100)</text>
+    <text x="20" y="350">DKIM: selector `default` found but key is revoked/empty (p= is blank)</text>
+    <text x="20" y="370">BIMI: not found      MTA-STS: not found</text>
+    <text x="20" y="400" fill="#79c0ff">## 3. TLS certificate health</text>
+    <text x="20" y="420">Subject: example.com   Issuer: Cloudflare TLS Issuing ECC CA 3</text>
+    <text x="20" y="440">Days remaining: 33      Chain trusted (system CA store): YES</text>
+    <text x="20" y="460">Protocol negotiated: TLSv1.3</text>
+    <text x="20" y="490" fill="#8b949e" font-style="italic">perimeterlens does not check HTTP headers — pair it with Mozilla HTTP Observatory for that.</text>
+    <text x="20" y="510" fill="#8b949e">Zero dependencies. Passive only. github.com/NicklasSandin/perimeterlens</text>
+  </g>
+</svg>
